@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Ejercicio {
@@ -40,8 +41,24 @@ public class Ejercicio {
         System.out.printf("total compra: %.2f%n",compra);
         System.out.printf("Cantidad por alumnos: %.2f %n",precioPersona);
 
-        teclado.close();
+       // teclado.close();
     }
 
+    public void ejercicio2(){
 
+        teclado = new Scanner(System.in);
+        //Pedir datos
+        System.out.print("Introduzca el valor de la compra: ");
+        double vCompra = teclado.nextDouble();
+        System.out.print("Introduzca el valor del IVA: ");
+        int vIva = teclado.nextInt();
+        //Calculos
+        double pSinIva = vCompra / ((100.0+vIva)/100.0);
+        double costeIva = vCompra - pSinIva;
+        //mostramos resultado en pantalla
+        System.out.printf("Valor de la compra: %.2f%n",pSinIva);
+        System.out.printf("IVA: %.2f%n",costeIva);
+
+        teclado.close();
+    }
 }
