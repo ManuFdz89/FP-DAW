@@ -41,7 +41,7 @@ public class Ejercicio {
         System.out.printf("total compra: %.2f%n",compra);
         System.out.printf("Cantidad por alumnos: %.2f %n",precioPersona);
 
-       // teclado.close();
+        teclado.close();
     }
 
     public void ejercicio2(){
@@ -60,5 +60,44 @@ public class Ejercicio {
         System.out.printf("IVA: %.2f%n",costeIva);
 
         teclado.close();
+    }
+
+    public void ejercicio3(){
+
+        teclado = new Scanner(System.in);
+
+        /*
+        Se introducen los 5 dígitos de un número (decenas de mil, unidades de mil, centenas, decenas y unidades), y se obtiene el número correspondiente. (Numero)
+        Decenas de mil: 7
+        Unidades de mil: 9
+        Centenas: 0
+        Decenas: 5
+        Unidades: 0
+        Numero introducido: 79050
+         */
+        System.out.println("Introduce un número descompuesto de la siguiente forma:");
+        System.out.print("Decenas de mil: ");
+        int decenasMil = teclado.nextInt();
+        System.out.print("Unidades de mil: ");
+        int unidadesMil = teclado.nextInt();
+        System.out.print("Centenas: ");
+        int centenas = teclado.nextInt();
+        System.out.print("Decenas: ");
+        int decenas = teclado.nextInt();
+        System.out.print("Unidades: ");
+        int unidades = teclado.nextInt();
+
+        decenasMil = decenasMil * 10000;
+        unidadesMil = unidadesMil * 1000;
+        centenas = centenas * 100;
+        decenas =decenas * 10;
+
+        int numero = decenasMil+unidadesMil+centenas+decenas+unidades;
+
+        System.out.print("El número introducido es: "+numero);
+
+
+
+
     }
 }
