@@ -94,8 +94,15 @@ public class Ejercicio {
 
         int numero = decenasMil+unidadesMil+centenas+decenas+unidades;
 
-        System.out.print("El número introducido es: "+numero);
+        System.out.println("El número introducido es: "+numero);
 
+        unidades = numero %10;
+        decenas = (numero/10)%10;
+        centenas = (numero/100)%10;
+        unidadesMil = (numero/1000)%10;
+        decenasMil = (numero/10000)%10;
+
+        System.out.printf("las decenas de mil son %d, las unidades de mil son %d, las centenas son %d, las decenas son %d,y las unidades son %d", decenasMil, unidadesMil, centenas, decenas,unidades);
 
 
 
