@@ -102,9 +102,37 @@ public class Ejercicio {
         unidadesMil = (numero/1000)%10;
         decenasMil = (numero/10000)%10;
 
-        System.out.printf("las decenas de mil son %d, las unidades de mil son %d, las centenas son %d, las decenas son %d,y las unidades son %d", decenasMil, unidadesMil, centenas, decenas,unidades);
+        System.out.printf("las decenas de mil son %d, las unidades de mil son %d, las centenas son %d, las decenas son %d,y las unidades son %d",
+                decenasMil, unidadesMil, centenas, decenas,unidades);
 
 
 
     }
+
+    public void ejercicio4(){
+
+        /*
+        Hágase un programa que convierta segundos en horas, minutos y segundos.(Segundos)
+        Número de segundos: 24973 Horas: 6 Minutos: 56 Segundos: 13
+         */
+
+        teclado = new Scanner(System.in);
+
+        System.out.print("Introduce número de segundos: ");
+        int numero = teclado.nextInt();
+
+        int horas = numero/3600;
+        int minutos = (numero%3600)/60;
+        int segundos = (numero%3600)%60;
+
+        System.out.printf("Horas %d%nMinutos %d%nSegundos %d%n", horas, minutos, segundos);
+
+
+
+
+
+    }
+
+
+
 }
