@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>One Piece - Merchandising</title>
+</head>
+<body>
+    <section id="presentacion">
+        <h1>
+            Merchandising 
+            <img src="Logo.webp" width="125" alt="onepiece" title="logotipo con las palabras One Piece">
+        </h1>
+
+        <img src="luffy.jpg" width="150" alt="Imgagen de Luffy preparandose para dar un puñetazo"
+            title="Luffy-Puñetazo">
+
+        <p>Aqui podres desubrir las ultimas novedades sobre One Piece, además encontraras productos exclusivos. Siguenos
+            en nuestro perfil de <STRong>Instagram</STRong> <a href="https://www.instagram.com/onepiece.espana/"
+                target="_blank">@ONEPIECE.ESPAÑA</a></p>
+    </section>
+    <hr>
+    <section id="contacto">
+        <p>Rellena nuestro formulario de contacto con tus preferencias y nos pondremos en contacto contigo.</p>
+
+        <form>
+            <fieldset>
+                <legend>Formulario</legend>
+                <fieldset>
+                    <legend>Datos Contacto</legend>
+                    <label>
+                        Nombre:
+                        <input type="text" placeholder="Nombre y apellidos" required>
+                    </label>
+                    <p></p>
+                    <label>Fecha de nacimiento:</label>
+                    <input type="date">
+                    <p></p>
+                    <label>
+                        Teléfono móvil:
+                        <input type="tel" placeholder="xxx xxx xxx">
+                    </label>
+                    <p></p>
+                    <label>
+                        Correo electronico:
+                        <input type="email" placeholder="alguien@gmail.com" required>
+                    </label>
+                    <p></p>
+                </fieldset>
+                <fieldset>
+                    <legend>Intereses</legend>
+                    <label>Marcas</label>
+                    <select name="marcasfamosa" size="1">
+                        <option value="sinSeleccion">---</option>
+                        <option value="bandai">Bandai Namco</option>
+                        <option value="artSpirits">Art-Spirits</option>
+                        <option value="xPlus">X-Plus</option>
+                        <option value="aniplex">AniPlex+</option>
+                        <option value="banpresto">Banpresto</option>
+                    </select>
+                    <p></p>                 
+                    <fieldset>
+                        <legend>Formato preferido</legend>
+                        <input type="radio" name="formatoPreferido" value="anime" checked>
+                        <label>Anime</label>
+                        <input type="radio" name="formatoPreferido" value="liveAction">
+                        <label>Live Action</label>
+                    </fieldset>
+                    <p></p>
+                    <fieldset>
+                        <legend>Merchandising</legend>
+                        <input type="checkbox" name="merchandising" value="figuras">
+                        <label>Figuras</label>
+                        <input type="checkbox" name="merchandising" value="manga">
+                        <label>Manga</label>
+                        <input type="checkbox" name="merchandising" value="funkoPop">
+                        <label>Funko-Pop</label>
+                        <input type="checkbox" name="merchandising" value="prints">
+                        <label>Prints</label>
+                    </fieldset>
+                    <p></p>
+                    <label>Comentarios:</label>
+                    <p></p>
+                    <textarea name="comentarios" rows="5" cols="60" placeholder="Escribe lo que se te pase por la cabeza."></textarea>
+                </fieldset>
+                <p></p>
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>
