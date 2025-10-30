@@ -187,6 +187,35 @@ public class Operaciones {
 
 
     }
+    public void ejercicio13(){
+        System.out.print("Introduce tu edad: ");
+        int edad = teclado.nextInt();
+        System.out.print("Introduce el dia de la semana (1-7): ");
+        int diaSem = teclado.nextInt();
+        double precio=0;
+        if (diaSem>0 &&diaSem<8){
+            if (edad<12 || (edad<18 && diaSem==2)){
+                precio =0;
+            } else if (edad<18) {
+                precio =5;
+            } else if (edad>17 && edad<65) {
+                precio =10;
+                if (diaSem == 4){
+                    precio = 7;
+                }
+            } else {
+                precio=6;
+            }
+        }else {
+            System.out.println("Introduce un dia válido");
+        }
+        System.out.println("Edad: "+edad+" años.");
+        System.out.println("Dia de la semana: "+diaSem);
+        System.out.println("¿Eres menor de 12?: "+edad);
+        System.out.println("Precio entrada: "+precio);
+
+    }
+
     public void scn(){
         teclado.close();
     }
