@@ -13,7 +13,10 @@ public class Main {
         //operaciones.ejercicio7();
         //operaciones.ejercicio8();
         //operaciones.ejercicio9();
-        operaciones.ejercicio10();
+        //operaciones.ejercicio10();
+        operaciones.ejercicio11();
+
+        operaciones.scn();
 
 
     }

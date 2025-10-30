@@ -4,11 +4,9 @@ import java.util.Scanner;
 
 public class Operaciones {
 
-    Scanner teclado;
+    Scanner teclado = new Scanner(System.in);
 
     public void ejercicio1(){
-
-        teclado = new Scanner(System.in);
 
         System.out.println("Introduce tu edad: ");
         int edad = teclado.nextInt();
@@ -19,11 +17,8 @@ public class Operaciones {
             System.out.println("Eres menor de edad. No puedes votar");
         }
 
-        //teclado.close();
     }
     public void ejercicio2(){
-
-       teclado = new Scanner(System.in);
 
         System.out.println("Introduce un numero: ");
         int numero = teclado.nextInt();
@@ -38,8 +33,6 @@ public class Operaciones {
     }
     public void ejercicio3(){
 
-       teclado = new Scanner(System.in);
-
         System.out.println("Introduce tu nota: ");
         double nota = teclado.nextDouble();
 
@@ -51,8 +44,6 @@ public class Operaciones {
 
     }
     public void ejercicio4(){
-
-        teclado = new Scanner(System.in);
 
         System.out.println("introduce el importe de la compra: ");
         double precioCompra = teclado.nextDouble();
@@ -68,7 +59,6 @@ public class Operaciones {
         System.out.printf("Importe Final: %.1f €%n",(precioCompra-descuento));
     }
     public void ejercicio5(){
-        teclado = new Scanner(System.in);
 
         System.out.println("introduce un numero: ");
         int numero = teclado.nextInt();
@@ -80,7 +70,6 @@ public class Operaciones {
         }
     }
     public void ejercicio6(){
-        teclado = new Scanner(System.in);
 
         System.out.println("Introduce tu edad: ");
         int edad = teclado.nextInt();
@@ -94,7 +83,7 @@ public class Operaciones {
 
     }
     public void ejercicio7(){
-        teclado = new Scanner(System.in);
+
         System.out.print("Introduce tu nota: ");
         double nota = teclado.nextDouble();
         String resultado = "0";
@@ -113,7 +102,6 @@ public class Operaciones {
         System.out.println("Tu calificacion es: "+resultado);
     }
     public void ejercicio8(){
-        teclado = new Scanner(System.in);
 
         System.out.println("Introduce el primer numero: ");
         int nUno = teclado.nextInt();
@@ -134,7 +122,6 @@ public class Operaciones {
 
     }
     public void ejercicio9(){
-        teclado = new Scanner(System.in);
 
         System.out.println("Introduce tu peso en Kg");
         double peso = teclado.nextDouble();
@@ -153,7 +140,6 @@ public class Operaciones {
         }
     }
     public void ejercicio10(){
-        teclado = new Scanner(System.in);
 
         System.out.print("Introduce tu altura en cm:");
         int altura = teclado.nextInt();
@@ -168,9 +154,41 @@ public class Operaciones {
 
     }
     public void ejercicio11(){
+        System.out.println("Introduce el importe de la compra: ");
+        double pCompra = teclado.nextDouble();
+        System.out.println("¿Eres socio?");
+        boolean socio = teclado.nextBoolean();
+        System.out.println("Importe Original: "+pCompra);
+        double desc;
+        int descuento;
+
+        if (socio && pCompra>=200){
+            descuento = 20;
+            desc = pCompra*0.2;
+            pCompra = pCompra*0.8;
+            System.out.println("Eres socio y tu compra es >=200");
+        } else if (socio && pCompra<200){
+            descuento = 10;
+            desc = pCompra*0.1;
+            pCompra = pCompra*0.9;
+            System.out.println("Eres socio y tu compra es <200");
+        } else if (!socio && pCompra>=300) {
+            descuento = 5;
+            desc = pCompra*0.05;
+            pCompra = pCompra*0.95;
+            System.out.println("No eres socio y tu compra es >=300");
+        }else {
+            descuento = 0;
+            desc = 0;
+            System.out.println("No eres socio y tu compra es <300");
+        }
+        System.out.printf("Descuento aplicado (%d%%): %.1f%n",descuento, desc);
+        System.out.println("Importe final: "+pCompra);
 
 
     }
-
+    public void scn(){
+        teclado.close();
+    }
 
 }
