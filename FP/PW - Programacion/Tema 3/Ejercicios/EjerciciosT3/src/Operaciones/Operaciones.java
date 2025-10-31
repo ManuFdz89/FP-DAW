@@ -187,6 +187,59 @@ public class Operaciones {
 
 
     }
+    public void ejercicio12(){
+        System.out.print("Introduce una contraseña: ");
+        String contraseña = teclado.nextLine();
+
+        int longitud = contraseña.length();
+        System.out.print("Longitud de la contraseña: "+longitud+"\n");
+
+        boolean complongitud = longitud>=8;
+        System.out.println("¿Tiene al menos 8 caracteres?: "+complongitud);
+
+        boolean conNumero = contraseña.matches(".*\\d.*");
+        System.out.println("¿Contiene al menos un número?: "+ conNumero);
+
+        boolean conProhibida = contraseña.equals("12345678") || contraseña.equals("password");
+        System.out.println("¿Es una contraseña prohibida?: "+conProhibida);
+
+        boolean valida = complongitud && conNumero && !conProhibida;
+        System.out.println("¿Es válida? (cumple todos los requisitos): "+valida);
+        if (valida){
+            System.out.println("Contraseña válida.");
+        } else if (!complongitud) {
+            System.out.println("Contraseña no válida. Debe tener al menos 8 caracteres");
+        } else {
+            System.out.println("Contraseña no válida");
+        }
+
+
+       /* boolean complongitud;
+        if (longitud>=8){
+            complongitud = true;
+        }else {complongitud = false;}
+        System.out.println("¿Tiene al menos 8 caracteres?: "+ complongitud);
+
+        boolean conNumero = contraseña.matches(".*\\d.*");
+        System.out.println("¿Contiene almenos un número?: "+ conNumero);
+
+        boolean compProhibida;
+        if (contraseña == "12345678" || contraseña == "password"){
+            compProhibida = false;
+        }else {compProhibida = true;}
+        System.out.println("¿Es una contraseña prohibida?: "+ compProhibida);
+
+        boolean valida = complongitud==true && compProhibida==true;
+        System.out.println("¿Es válida? (cumple todos los requisitos): "+valida);
+
+        if (!complongitud){
+            System.out.println("Contraseña NO váldia, debe tener al menos 8 caracteres.");
+        } else if (!compProhibida) {
+            System.out.println("Contraseña no válida (no puedes utilizar las palabras prohibidas)");
+        } else {
+            System.out.println("Contraseña válida");
+        }*/
+    }
     public void ejercicio13(){
         System.out.print("Introduce tu edad: ");
         int edad = teclado.nextInt();
@@ -215,6 +268,69 @@ public class Operaciones {
         System.out.println("Precio entrada: "+precio);
 
     }
+    public void ejercicio14(){
+        System.out.print("Introduce tu edad: ");
+        int edad = teclado.nextInt();
+        System.out.print("Introduce tus ingresos mensuales: ");
+        double ingresos = teclado.nextDouble();
+        System.out.print("¿tienes deudas pendientes? (true/false): ");
+        boolean deudas = teclado.nextBoolean();
+
+        boolean edadOk = edad > 20 && edad < 66;
+        System.out.println("¿Edad entre 21 y 65 años?"+edadOk);
+
+        boolean ingresosOk = ingresos >= 1000;
+        System.out.println("¿Ingresos >= 1000€?: "+ingresosOk);
+
+        System.out.println("¿Sin deudas pendientes?: "+!deudas);
+
+        boolean elegible = edadOk && ingresosOk && !deudas;
+        System.out.println("¿Es elegible para el prestamo?: "+elegible);
+
+        if (elegible){
+            System.out.println("!Felicidades¡, Eres elegible para solicitar el préstamo.");
+        }else {
+            System.out.println("Lo siento pero no eres elegible para solicitar el prestamo");
+        }
+
+    }
+    public void ejercicio15(){
+
+        System.out.println("Introduce el peso del paquete (kg): ");
+        double peso = teclado.nextDouble();
+
+        System.out.println("Introduce la distancia de envio (km): ");
+        int distancia = teclado.nextInt();
+
+        System.out.println("¿Es envio urgente? (true/false): ");
+        boolean urgente = teclado.nextBoolean();
+
+        double precioBase = 5.0;
+        System.out.println("Precio base: "+precioBase);
+
+        if (peso>5.0){
+            double diferenciaPeso = peso - 5.0;
+            precioBase = precioBase + (diferenciaPeso*2);
+            System.out.printf("Peso: %.1fkg (excede 5kg en %.1fkg): %n",peso,diferenciaPeso);
+            System.out.println("Coste adicional por peso: "+(diferenciaPeso*2)+"€");
+        }
+        if (distancia>100){
+            System.out.printf("Distancia: %d km (mayor de 100km)%n",distancia);
+            //double diferenciaDistancia = distancia - 100;
+            System.out.println("Coste adicional por distancia: 10.0€");
+            precioBase = precioBase + 10;
+            System.out.println("Subtotal: "+precioBase+"€");
+        }
+        System.out.println("¿Es envio urgente: ?"+urgente);
+        if (urgente) {
+            double recargo = (precioBase*1.5)-precioBase;
+            precioBase = precioBase*1.5;
+            System.out.println("Recargo por urgencia (x1.5): "+recargo+"€");
+        }
+
+        System.out.println("Coste total de envio: "+precioBase);
+    }
+
 
     public void scn(){
         teclado.close();

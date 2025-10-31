@@ -15,7 +15,10 @@ public class Main {
         //operaciones.ejercicio9();
         //operaciones.ejercicio10();
         //operaciones.ejercicio11();
-        operaciones.ejercicio13();
+        //operaciones.ejercicio12();
+        //operaciones.ejercicio13();
+        //operaciones.ejercicio14();
+        //operaciones.ejercicio15();
 
         operaciones.scn();
 
