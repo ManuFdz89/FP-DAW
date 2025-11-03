@@ -26,7 +26,9 @@ public class Main {
         //ejercicios.ejercicio1();
         //ejercicios.ejercicio2();
         //ejercicios.ejercicio3();
-        ejercicios.ejercicio4();
+        //ejercicios.ejercicio4();
+        //ejercicios.ejercicio5();
+        ejercicios.ejercicio6();
 
         ejercicios.scn();
 

@@ -1,5 +1,6 @@
 package Operaciones;
 
+import javax.swing.plaf.PanelUI;
 import java.util.Scanner;
 
 public class SwitchFor {
@@ -83,6 +84,39 @@ public class SwitchFor {
             default -> "Selecciona un valor admitido.";
         };
         System.out.printf("Has seleccionado: %s%n", resultado);
+
+    }
+    public void ejercicio5(){
+        System.out.println("Introduce el numero del mes (1-12): ");
+        int mes = teclado.nextInt();
+        String estacion = "";
+
+        switch (mes){
+            case 12, 1, 2:
+                estacion = "Invierno";
+                break;
+            case 3, 4, 5:
+                estacion = "Primavera";
+                break;
+            case 6, 7, 8:
+                estacion = "Verano";
+                break;
+            case 9, 10, 11:
+                estacion = "Otoño";
+                break;
+            default:
+                estacion = "Selecciona un numero válido";
+        }
+        System.out.printf("El mes %d corresponde a: %s%n", mes, estacion);
+    }
+    public void ejercicio6(){
+        System.out.print("Introduce un número:");
+        int numero = teclado.nextInt();
+        int i;
+        System.out.printf("Tabla del %d%n",numero);
+        for (i=1; i<=10; i++){
+            System.out.printf("%d x %d = %d%n", numero, i, (numero*i));
+        }
 
     }
 
