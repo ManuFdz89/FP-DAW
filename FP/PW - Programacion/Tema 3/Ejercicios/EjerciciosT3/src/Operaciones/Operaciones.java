@@ -146,8 +146,10 @@ public class Operaciones {
 
         if (altura>=120 && altura<=200){
             System.out.println("Puedes subir");
-        }else {
-            System.out.println("Demasiado alto o demasiado bajo");
+        }else if (altura<120){
+            System.out.println("No puedes subir a la atracción. Altura mínima: 120 cm.");
+        }else if (altura>200){
+            System.out.println("No puedes subir a la atracción. Altura máxima: 200 cm.");
         }
 
 
