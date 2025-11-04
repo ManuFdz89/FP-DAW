@@ -113,9 +113,19 @@ public class SwitchFor {
         System.out.print("Introduce un número:");
         int numero = teclado.nextInt();
         int i;
-        System.out.printf("Tabla del %d%n",numero);
+        System.out.printf("-------  Tabla del %d  --------%n",numero);
         for (i=1; i<=10; i++){
-            System.out.printf("%d x %d = %d%n", numero, i, (numero*i));
+            System.out.printf("          %d x %d = %d%n", numero, i, (numero*i));
+        }
+
+    }
+    public void ejercicio7(){
+        System.out.print("Introduce un numero: ");
+        int numero = teclado.nextInt();
+        int resultado = 0;
+
+        for (int i=1; i<=numero; i++){
+            resultado = numero+i;
         }
 
     }

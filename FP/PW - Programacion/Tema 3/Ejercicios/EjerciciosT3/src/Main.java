@@ -1,10 +1,13 @@
 import Operaciones.Operaciones;
 import Operaciones.SwitchFor;
 
+
+
 public class Main {
 
     public static void main(String[] args) {
         Operaciones operaciones = new Operaciones();
+        SwitchFor ejercicios = new SwitchFor();
         //operaciones.ejercicio1();
         //operaciones.ejercicio2();
         //operaciones.ejercicio3();
@@ -21,14 +24,15 @@ public class Main {
         //operaciones.ejercicio14();
         //operaciones.ejercicio15();
         //operaciones.scn();
-
-        SwitchFor ejercicios = new SwitchFor();
         //ejercicios.ejercicio1();
         //ejercicios.ejercicio2();
         //ejercicios.ejercicio3();
         //ejercicios.ejercicio4();
         //ejercicios.ejercicio5();
-        ejercicios.ejercicio6();
+        //ejercicios.ejercicio6();
+        //ejercicios.ejercicio7();
+        //ejercicios.ejercicio8();
+        //ejercicios.ejercicio9();
 
         ejercicios.scn();
 
