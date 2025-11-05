@@ -30,7 +30,7 @@ public class Main {
         //ejercicios.ejercicio4();
         //ejercicios.ejercicio5();
         //ejercicios.ejercicio6();
-        //ejercicios.ejercicio7();
+        ejercicios.ejercicio7();
         //ejercicios.ejercicio8();
         //ejercicios.ejercicio9();
 

@@ -123,11 +123,16 @@ public class SwitchFor {
         System.out.print("Introduce un numero: ");
         int numero = teclado.nextInt();
         int resultado = 0;
-
+        System.out.print("Sumando: ");
         for (int i=1; i<=numero; i++){
-            resultado = numero+i;
+            resultado += i;              //resultado = resultado+i; es lo mismo las dos opciones
+            if (i!=numero){
+                System.out.print(i + " + ");
+            }else {
+                System.out.println(i);
+            }
         }
-
+        System.out.printf("La suma de números del 1 al %d es: %d%n",numero, resultado);
     }
 
 
